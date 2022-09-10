@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repita Comigo | Exercício 10</title>
+</head>
+<body>
+    <script>
+        /* 10 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário. */
+
+        var tabuada = parseInt(prompt("Digite o número da tabuada:"));
+        var contador = 1;
+
+        while(isNaN(tabuada) || tabuada <= 0){
+            tabuada = parseInt(prompt("Digite o número da tabuada:"));
+        }
+
+        while(contador <= tabuada){
+            document.write(contador + "X" + "1 = " + contador * 1 + "<br>");
+            document.write(contador + "X" + "2 = " + contador * 2 + "<br>");
+            document.write(contador + "X" + "3 = " + contador * 3 + "<br>");
+            document.write(contador + "X" + "4 = " + contador * 4 + "<br>");
+            document.write(contador + "X" + "5 = " + contador * 5 + "<br>");
+            document.write(contador + "X" + "6 = " + contador * 6 + "<br>");
+            document.write(contador + "X" + "7 = " + contador * 7 + "<br>");
+            document.write(contador + "X" + "8 = " + contador * 8 + "<br>");
+            document.write(contador + "X" + "9 = " + contador * 9 + "<br>");
+            document.write(contador + "X" + "10 = " + contador * 10 + "<br><hr>");
+            contador++;
+        }
+    </script>
+</body>
+</html>

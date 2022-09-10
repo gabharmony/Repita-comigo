@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repita Comigo | Exercicio 5</title>
+</head>
+<body>
+    <script>
+        /* 5 - Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário e todos os números 
+         inteiros entre eles. Considere que o primeiro sempre será menor que o segundo. */
+
+        var numUm = parseInt(prompt("Digite o primeiro número inteiro:"));
+        var numDois = parseInt(prompt("Digite o segundo número inteiro:"));
+        var contagem = numUm + 1;
+        var soma = 0;
+        var numNum = 1;
+        var media = 0;
+        var mediaEntre = 0;
+
+        while(isNaN(numUm)){
+           numUm = parseInt(prompt("Digite o primeiro número:"));
+        }
+
+        while(isNaN(numDois) || numDois <= numUm){
+            numDois = parseInt(prompt("Digite o segundo número:"));
+        }
+
+        while(contagem < numDois){
+            numNum++
+            soma += contagem;
+            contagem++;
+        }
+
+        media = (numUm + numDois) / 2;
+        mediaEntre = soma / (numNum - 1);
+
+        if(numDois == numUm + 1){
+            document.write("A média aritmética dos números entre o primeiro e o segundo número digitado não pode ser calculada, porque não tem números entre " + numUm + " e " + numDois + ".");
+        }
+        else{
+            document.write("A média aritmética dos dois números digitados é " +  media + "<br>");
+            document.write("A média aritmética dos números entre o primeiro e o segundo número digitado é " + mediaEntre);
+        }
+    </script>
+</body>
+</html>
